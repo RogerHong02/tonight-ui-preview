@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>D 搭子版 · 详情页 · 今晚有局 UI 预览</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=ZCOOL+KuaiLe&display=swap">
+  <style>
+    body { margin:0; background:#5B3DF5; font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; -webkit-font-smoothing:antialiased; }
+    a { color:#FFD23F; } a:hover { color:#FFE38A; }
+  </style>
+<style>
+  html, body { margin:0; background:#1A1A1A; }
+  .stage { display:flex; justify-content:center; padding:28px 0 40px 0; }
+  .root { box-shadow:0 24px 70px rgba(0,0,0,0.55); border-radius:36px; }
+  .backbar { position:fixed; left:0; right:0; bottom:0; display:flex; justify-content:center; padding:10px; pointer-events:none; }
+  .backbar a { pointer-events:auto; font:500 13px/1 "Noto Sans SC", sans-serif; color:#fff; background:rgba(0,0,0,0.6); border:1px solid rgba(255,255,255,0.2); padding:10px 16px; border-radius:999px; text-decoration:none; backdrop-filter:blur(8px); }
+  @media (max-width: 480px) {
+    html, body { background:#5B3DF5; }
+    .stage { padding:0; }
+    .root { width:100vw !important; height:100dvh !important; min-height:700px; border-radius:0; box-shadow:none; }
+    .backbar { display:none; }
+  }
+</style>
+</head>
+<body>
+<div class="stage"><div class="root" style="width:390px;height:844px;overflow:hidden;position:relative;background:#5B3DF5;color:#FFFFFF;">
+
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:54px 16px 0 16px;">
+    <div style="width:40px;height:40px;border-radius:50%;border:2px solid #14102B;background:#FFFFFF;color:#14102B;display:flex;align-items:center;justify-content:center;box-shadow:3px 3px 0 #14102B;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+    </div>
+    <div style="width:40px;height:40px;border-radius:50%;border:2px solid #14102B;background:#FFFFFF;color:#14102B;display:flex;align-items:center;justify-content:center;box-shadow:3px 3px 0 #14102B;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"></path></svg>
+    </div>
+  </div>
+
+  <div style="padding:22px 20px 0 20px;">
+    <div style="display:inline-flex;height:28px;padding:0 12px;border:2px solid #14102B;border-radius:8px;background:#FFD23F;color:#14102B;font-size:12px;font-weight:900;align-items:center;transform:rotate(-3deg);">免费 · 饭局</div>
+    <div style="margin-top:12px;font-family:'ZCOOL KuaiLe','Noto Sans SC',sans-serif;font-size:44px;line-height:1.05;">创始团队<br>饭局</div>
+    <div style="margin-top:12px;display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:500;">
+      <div style="display:flex;align-items:center;gap:8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>周四 9月17日 · 10:21</div>
+      <div style="display:flex;align-items:center;gap:8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>御宝轩 · Waterloo Rd</div>
+    </div>
+  </div>
+
+  <div style="margin:20px 20px 0 20px;border:2px solid #14102B;border-radius:20px;background:#FFFFFF;color:#14102B;padding:14px 16px;box-shadow:5px 5px 0 #14102B;">
+    <div style="display:flex;align-items:center;justify-content:space-between;">
+      <div style="font-family:'ZCOOL KuaiLe','Noto Sans SC',sans-serif;font-size:20px;">谁来了</div>
+      <div style="font-size:12px;font-weight:700;color:#5A5470;">1 人说来</div>
+    </div>
+    <div style="margin-top:12px;display:flex;gap:12px;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;width:56px;">
+        <div style="width:48px;height:48px;border-radius:50%;background:#FFB37A;border:2px solid #14102B;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;">L</div>
+        <div style="font-size:11px;font-weight:700;">Ly</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;width:56px;">
+        <div style="width:48px;height:48px;border-radius:50%;background:#FFF7E8;border:2px dashed #14102B;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:#8A84A0;">?</div>
+        <div style="font-size:11px;font-weight:700;color:#8A84A0;">你？</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;width:56px;">
+        <div style="width:48px;height:48px;border-radius:50%;background:#FFF7E8;border:2px dashed #14102B;opacity:0.5;"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;width:56px;">
+        <div style="width:48px;height:48px;border-radius:50%;background:#FFF7E8;border:2px dashed #14102B;opacity:0.3;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin:16px 20px 0 20px;display:flex;gap:10px;align-items:flex-start;">
+    <div style="width:36px;height:36px;border-radius:50%;background:#FFD23F;border:2px solid #14102B;color:#14102B;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;flex-shrink:0;">T</div>
+    <div style="flex:1;border:2px solid #14102B;border-radius:18px;border-top-left-radius:4px;background:#FFF7E8;color:#14102B;padding:12px 14px;">
+      <div style="font-size:11px;font-weight:900;color:#5A5470;">Tonight Official · Host 说</div>
+      <div style="margin-top:4px;font-size:14px;line-height:1.65;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;">想请你来坐坐，一起吃顿饭、认识一下。不用准备自我介绍，也不需要有什么创业背景。一个人参加也没关系，我们会帮大家打开话题，慢慢聊熟。</div>
+    </div>
+  </div>
+
+  <div style="position:absolute;left:0;right:0;bottom:0;padding:14px 20px 26px 20px;background:#5B3DF5;border-top:2px solid #14102B;display:flex;flex-direction:column;gap:10px;">
+    <div style="font-family:'ZCOOL KuaiLe','Noto Sans SC',sans-serif;font-size:18px;">你来吗？</div>
+    <div style="display:flex;gap:10px;">
+      <div style="flex:1.4;height:50px;border:2px solid #14102B;border-radius:999px;background:#FFD23F;color:#14102B;font-size:17px;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:4px 4px 0 #14102B;">来！</div>
+      <div style="flex:1;height:50px;border:2px solid #14102B;border-radius:999px;background:#FFFFFF;color:#14102B;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;">可能</div>
+      <div style="flex:1;height:50px;border:2px solid rgba(255,255,255,0.5);border-radius:999px;color:#FFFFFF;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;">不来</div>
+    </div>
+  </div>
+</div></div>
+<div class="backbar"><a href="index.html">返回方向总览</a></div>
+</body>
+</html>

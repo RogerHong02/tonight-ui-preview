@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>今晚有局 · UI 方向预览</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap">
+<style>
+  :root { --ink:#1C1A17; --muted:#6F6A62; --line:#E6E0D6; --bg:#F7F4EF; --card:#FFFFFF; --accent:#FF5470; }
+  html, body { margin:0; background:var(--bg); color:var(--ink); font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; -webkit-font-smoothing:antialiased; }
+  a { color:var(--ink); }
+  .wrap { max-width:1360px; margin:0 auto; padding:36px 24px 80px 24px; }
+  header { display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:16px; margin-bottom:12px; }
+  h1 { font-size:34px; line-height:1.15; margin:0; font-weight:900; }
+  .sub { font-size:14px; color:var(--muted); margin-top:8px; }
+  .links { display:flex; gap:10px; flex-wrap:wrap; }
+  .links a { font-size:14px; font-weight:500; text-decoration:none; padding:10px 16px; border-radius:999px; border:1px solid var(--line); background:var(--card); }
+  .links a.primary { background:var(--ink); color:#fff; border-color:var(--ink); }
+  .intro { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:18px 20px; margin:22px 0 36px 0; font-size:15px; line-height:1.8; }
+  .intro strong { font-weight:700; }
+  .dir { border-top:1px solid var(--line); padding-top:32px; margin-top:32px; display:grid; grid-template-columns: 340px 1fr; gap:32px; align-items:start; }
+  .dir h2 { font-size:24px; margin:0 0 6px 0; }
+  .dir .tag { display:inline-block; font-size:12px; font-weight:700; padding:4px 10px; border-radius:6px; background:#EDE7DD; margin-bottom:12px; }
+  .dir p { font-size:14px; line-height:1.8; margin:0 0 10px 0; }
+  .dir p b { font-weight:700; }
+  .phones { display:flex; gap:24px; flex-wrap:wrap; }
+  .phone { position:relative; width:312px; height:675px; border-radius:30px; overflow:hidden; background:#000; box-shadow:0 20px 50px rgba(28,26,23,0.18); }
+  .phone iframe { width:390px; height:844px; border:0; transform:scale(0.8); transform-origin:top left; pointer-events:none; }
+  .phone a.open { position:absolute; inset:0; text-decoration:none; }
+  .phone .lbl { position:absolute; left:12px; top:12px; font-size:12px; font-weight:700; color:#fff; background:rgba(0,0,0,0.55); padding:5px 10px; border-radius:999px; backdrop-filter:blur(6px); }
+  .phone .hint { position:absolute; right:12px; bottom:12px; font-size:12px; color:#fff; background:rgba(0,0,0,0.55); padding:5px 10px; border-radius:999px; }
+  footer { margin-top:48px; padding-top:20px; border-top:1px solid var(--line); font-size:13px; color:var(--muted); line-height:1.8; }
+  @media (max-width: 900px) {
+    .dir { grid-template-columns: 1fr; gap:18px; }
+    .phones { gap:12px; }
+    .phone { width:164px; height:355px; border-radius:18px; }
+    .phone iframe { transform:scale(0.4205); }
+    .phone .lbl { font-size:11px; padding:4px 8px; left:8px; top:8px; }
+    .phone .hint { display:none; }
+    h1 { font-size:26px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>今晚有局 · 4 个 UI 方向</h1>
+      <div class="sub">tonight.ink 手机端重设计参考 · 2026-09-10 · 点任意手机可全屏打开，用手机直接看效果最准</div>
+    </div>
+    <div class="links">
+      <a class="primary" href="audit.html">UX 审计报告</a>
+      <a href="canvas.html">设计画布（可导出 PNG / PDF）</a>
+    </div>
+  </header>
+
+  <div class="intro">
+    四个方向差别在气质，不在骨架。骨架是四个都统一改掉的东西：<strong>顶栏压成一行</strong>（现在手机端顶部三层固定区吃掉 23% 屏幕）、<strong>去掉和首页重复的"活动"tab</strong>、<strong>卡片只留封面 / 时间 / 标题 / 地点 + 谁在去</strong>（现在一张卡 10 层信息）、<strong>主按钮固定在底部</strong>（现在详情页要滑到第 3.3 屏才看到"申请"）、<strong>删掉全部免责文案</strong>、<strong>换上真正的中文字体</strong>（现在是 Arial 回退）。
+    内容说明：创始团队饭局和两个内测局是站上真实活动；C 方向里标了"示例"的卡片只是为了看双列排版效果。
+  </div>
+
+  <section class="dir">
+    <div>
+      <div class="tag">对标 DICE / Luma 暗色</div>
+      <h2>A · 夜色版</h2>
+      <p><b>动机：</b>保留你现在的暗色基调和品牌红，但做成夜生活产品该有的样子：纯黑底、边到边大海报、一个高饱和珊瑚红、粗标题字（ZCOOL 青柯黄油体）。和现有站点迁移成本最低，改 CSS 和布局就能到。</p>
+      <p><b>代价：</b>暗色对"女生友好 / 安全"的信任感帮助不大，饭局、桌游这类白天场景略显不搭。</p>
+    </div>
+    <div class="phones">
+      <div class="phone"><iframe src="a-home.html" loading="lazy" title="A 首页"></iframe><a class="open" href="a-home.html"><span class="lbl">首页</span><span class="hint">点击全屏</span></a></div>
+      <div class="phone"><iframe src="a-detail.html" loading="lazy" title="A 详情页"></iframe><a class="open" href="a-detail.html"><span class="lbl">活动详情</span><span class="hint">点击全屏</span></a></div>
+    </div>
+  </section>
+
+  <section class="dir">
+    <div>
+      <div class="tag">对标 Luma</div>
+      <h2>B · 日光版</h2>
+      <p><b>动机：</b>米白底 + 宋体标题 + 一个梅子色，最像 Luma 的信息层级：缩略图在左、时间标题地点在右、按日期分组。最适合"女生友好、安全、可信"的定位，也是四个里最容易做好看、最不容易做丑的。</p>
+      <p><b>代价：</b>和"今晚 / 夜生活"的品牌名气质有距离，蹦迪、KTV 场景会显得太乖。</p>
+    </div>
+    <div class="phones">
+      <div class="phone"><iframe src="b-home.html" loading="lazy" title="B 首页"></iframe><a class="open" href="b-home.html"><span class="lbl">首页</span><span class="hint">点击全屏</span></a></div>
+      <div class="phone"><iframe src="b-detail.html" loading="lazy" title="B 详情页"></iframe><a class="open" href="b-detail.html"><span class="lbl">活动详情</span><span class="hint">点击全屏</span></a></div>
+    </div>
+  </section>
+
+  <section class="dir">
+    <div>
+      <div class="tag">对标 小红书</div>
+      <h2>C · 海报墙</h2>
+      <p><b>动机：</b>留学生已经养成的浏览习惯：双列图片流、标题两行、Host 头像 + 想去数、顶部横向分类 tab。内容密度最高，供给多了以后最有"热闹"感，也最适合把 Eventbrite / 学联 / 小红书上搬来的活动混在一起展示。</p>
+      <p><b>代价：</b>只有 3 个活动时会很空；对封面图质量要求最高，Host 不会拍照的话整页会很丑。</p>
+    </div>
+    <div class="phones">
+      <div class="phone"><iframe src="c-home.html" loading="lazy" title="C 首页"></iframe><a class="open" href="c-home.html"><span class="lbl">首页</span><span class="hint">点击全屏</span></a></div>
+      <div class="phone"><iframe src="c-detail.html" loading="lazy" title="C 详情页"></iframe><a class="open" href="c-detail.html"><span class="lbl">活动详情</span><span class="hint">点击全屏</span></a></div>
+    </div>
+  </section>
+
+  <section class="dir">
+    <div>
+      <div class="tag">对标 Partiful</div>
+      <h2>D · 搭子版</h2>
+      <p><b>动机：</b>把"报名"变成"回复群消息"：来 / 可能 / 不来 三个按钮，"谁来了"放最前面，Host 的介绍做成聊天气泡，贴纸式标签、粗描边、纯色块不依赖照片。最有记忆点，最适合小局和微信群里口碑传播。</p>
+      <p><b>代价：</b>风格最重，做不好会显得幼稚；对聚合第三方活动不友好，因为它假设每个局背后都有一个真人 Host。</p>
+    </div>
+    <div class="phones">
+      <div class="phone"><iframe src="d-home.html" loading="lazy" title="D 首页"></iframe><a class="open" href="d-home.html"><span class="lbl">首页</span><span class="hint">点击全屏</span></a></div>
+      <div class="phone"><iframe src="d-detail.html" loading="lazy" title="D 详情页"></iframe><a class="open" href="d-detail.html"><span class="lbl">活动详情</span><span class="hint">点击全屏</span></a></div>
+    </div>
+  </section>
+
+  <footer>
+    这是给 tonight.ink 的参考稿，不改动线上代码。四个方向可以混搭：例如 B 的信息层级 + A 的暗色 + D 的"来 / 可能 / 不来"回复方式。选定方向后再往下做完整页面（我的局、发布流程、报名后状态页、分享海报）。
+  </footer>
+</div>
+</body>
+</html>
